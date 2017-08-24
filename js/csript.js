@@ -12,9 +12,9 @@ $(function(){
 	function Move(){
 		clearInterval(iTimer)
 		i++;
-		if(i==8){
+		if(i==oLi.length){
 			i=0;
-		}
+		}		 
 		oSpan.eq(i).addClass("on").siblings().removeClass("on");
 		oLi.eq(i).fadeIn().siblings().fadeOut();
 		iTimer = setInterval(function(){
