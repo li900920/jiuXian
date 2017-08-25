@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>酒仙网</title>
 		<link rel="stylesheet" type="text/css" href="style/style.css" />
+		<script src="js/template.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
@@ -108,6 +109,7 @@
 				</ul>
 			</div>
 		</div>
+<!--------------------------------------头部导航搜索------------------------------>
 		<header>
 			<div class="header-top"></div>
 			<div class="header-search-wrap">
@@ -292,6 +294,7 @@
 				</nav>
 			</div>
 		</header>
+<!-----------------轮播图开始---------------------->
 		<div class="banner">
 			<ul>
 				<li>
@@ -436,6 +439,7 @@
 			</div>
 		</div>
 		<script src="js/csript.js" type="text/javascript" charset="utf-8"></script>
+<!-----------------------------主要内容区 商品展示-------------------------->
 		<div class="content">
 			<div class="content-left">
 				<a href="#"></a>
@@ -443,37 +447,206 @@
 			<div class="content-main">
 				<div class="content-main1-left">
 					<ul class="content-main1-nav">
-						<li><a href="#">疯狂抢购</a></li>
-						<li><a href="#">整箱囤货</a></li>
-						<li><a href="#">爆款精选</a></li>
-						<li><a href="#">口粮聚惠</a></li>
-						<li style="border-right: 0;"><a style="width: 182px;" href="#">大牌特卖</a></li>
+						<li class="hover">疯狂抢购</li>
+						<li>整箱囤货</li>
+						<li>爆款精选</li>
+						<li>口粮聚惠</li>
+						<li style="width: 182px;">大牌特卖</li>
 					</ul>
-					<ul class="content-main1-show">
-						<li>
-							<div>
-								<a href="#">
-									<img src=""/>
-								</a>
-							</div>
-							<div>
-								<a href="#"></a>
-							</div>
-							<div>
-								<p></p>
-							</div>
-						</li>
-					</ul>
+					<div class="content-main1-show">
+						<script id="temp1" type="text/html">
+							<ul>
+								{{each aaa as item }}
+								<li>
+									<div class="con-pic">
+										<a href="#">
+											<img src="{{item.imgurl}}"/>
+										</a>
+									</div>
+									<div class="con-title">
+										<a href="#">{{item.title}}</a>
+									</div>
+									<div class="con-price">
+										<p>{{item.price}}</p>
+									</div>
+								</li>
+								{{/each}}
+							</ul>
+						</script>		
+					</div>
+					<script type="text/javascript">
+						$(function(){
+							$.get("nav.json",function(data){
+								var html = template("temp1",data.productList[0])							 
+								$(".content-main1-show").html(html);
+							$(".content-main1-nav li").mouseover(function(){
+							var index = $(this).index();							 
+							var html = template("temp1",data.productList[index])							 
+							$(".content-main1-show").html(html);
+							$(this).addClass("hover").siblings().removeClass("hover")
+								})	
+							})
+						})						
+				</script>
 				</div>
+				
 				<div class="content-main1-right">
-					
+					<div class="con-right-top">
+						 <ul class="con-top-nav">
+						 	<li class="hover">公告信息</li>
+						 	<li>促销信息</li>
+						 </ul>
+						 <div class="con-top-list">
+						 	<script id="temp2" type="text/html">						 									 		
+							 	<ul>
+							 		{{each list as item}}
+							 		<li>
+							 			<a href="#">{{item.title}}</a>
+							 		</li>
+							 		{{/each}}
+							 	</ul>						 	
+						 	</script>						 		 						 		
+						 </div>
+						 <script type="text/javascript">
+						 	$(function(){
+								$.get("list.json",function(data){
+									var html = template("temp2",data.navList[0])							 
+									$(".con-top-list").html(html);
+								$(".con-top-nav li").mouseover(function(){
+								var index = $(this).index();							 
+								var html = template("temp2",data.navList[index])							 
+								$(".con-top-list").html(html);
+								$(this).addClass("hover").siblings().removeClass("hover")
+									})	
+								})
+						})	
+						 </script>
+					</div>				
+					<div class="con-right-mid">
+						<ul class="con-mid-pic">
+							<li>
+								<a href="#">
+									<img src="image/con-min-pic1.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="image/con-min-pic2.jpg"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="image/con-min-pic3.jpg"/>
+								</a>
+							</li>
+						</ul>
+						<p class="con-mid-nav">
+							<span class="active"></span>
+							<span></span>
+							<span></span>
+						</p>
+					</div>
+		<script src="js/con-mid-pic.js" type="text/javascript" charset="utf-8"></script>					 
+					<div class="con-right-bottom">
+						<ul class="con-bottom-pic">
+							<li>
+								<a href="#">
+									<img src="image/con-min-pic6.png"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="image/con-min-pic5.png"/>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="image/con-min-pic4.png"/>
+								</a>
+							</li>
+						</ul>
+						<p class="con-bottom-nav">
+							<span class="active"></span>
+							<span></span>
+							<span></span>
+						</p>
+					</div>
+		<script src="js/con-bottom-pic.js" type="text/javascript" charset="utf-8"></script>
 				</div>
 			</div>
 			<div class="content-right">
 				<a href="#"></a>
 			</div>
 		</div>
-
+		<section>
+			<div class="section-main1">
+				<div>
+					<a style="margin-left: 91px;" href="#">
+						<img src="image/con-main1-pic1.png"/>
+					</a>
+				</div>
+				<div style="margin: 0 5px;">
+					<a style="margin-left: 69px;" href="#">
+						<img src="image/con-main1-pic2.png"/>
+					</a>
+				</div>
+				<div>
+					<a style="margin-left: 47px;" href="#">
+						<img src="image/con-main1-pic3.png"/>
+					</a>
+				</div>
+			</div>
+			<div class="section-rollshows">
+				<span class="sec-rol-left"></span>
+				<span class="sec-rol-right"></span>
+				<div class="section-rollshows-title">
+					<h3>
+						<span></span>
+						<b>优惠推荐</b>
+					</h3>
+					<p class="sec-rol-nav">
+						<span class="active"></span>
+						<span style="margin: 0 15px;"></span>
+						<span></span>
+					</p>
+				</div>
+				<div class="sec-rol-list">					
+					<script id="temp3" type="text/html">
+						<ul>
+							{{each aaa as item}}
+							<li>
+								<div class="rol-list-pic">
+									<a href="#">									
+										<img src="{{item.imgurl}}"/>
+									</a>
+								</div>
+								<div class="rol-list-title">
+									<a href="#">{{item.title}}</a>
+								</div>								
+								<div class="roll-price">
+									<p>{{item.price}}</p>
+								</div>
+								<div class="roll-timer">
+								</div>
+							</li>
+							{{/each}}
+						</ul>
+					</script>					 
+				</div>
+			<script type="text/javascript">
+				$(function(){
+					$.get("sec-rol.json",function(data){
+						var html = template("temp3",data)
+						$(".sec-rol-list").html(html)
+					})
+					
+				})
+			</script>
+			<script src="js/sec-rollshow.js" type="text/javascript" charset="utf-8"></script>
+			</div>
+		</section>
+			
+		</div>
 		<footer></footer>
 	</body>
 
