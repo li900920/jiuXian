@@ -287,6 +287,7 @@ header{
             }
         }
     }
+//  ------------------------二级菜单导航列表
   .nav-wrap{
       width: 100%;
       height: 34px;
@@ -508,6 +509,8 @@ header{
   } 
 }
 //----------------------内容区商品展示开始------------------------//
+
+//----------------------------  商品展示导航图片列表//
 .content{
     width: 100%;
     min-height: 500px;
@@ -719,6 +722,7 @@ header{
         }
     }
 }
+
 section{
     width: 1200px;
     min-height: 500px;
@@ -742,10 +746,11 @@ section{
             }
         }
     }
+// -----------------中部长轮播商品展示--------------------------//
     .section-rollshows{
         width: 1200px;
         height: 289px;
-        position: relative;
+        position: relative;        
         .sec-rol-left{
                  display: block;
                  width: 27px;
@@ -802,42 +807,28 @@ section{
             }
         }
         .sec-rol-list{
-             width: 1198px;
-             height: 257px;
-             border: 1px solid #ececec;
-             background: #fff;
-             position: absolute;              
-             overflow: hidden;
-             .sec-rol-left{
-                 display: block;
-                 width: 27px;
-                 height: 56px;
-                 position: absolute;
-                 top: 100px;
-                 left: 0;
-                 background: url(../image/newIndexIcon-24.png) no-repeat;
-                 background-position: top -28px left 0;
-             }
-             .sec-rol-right{
-                 right: 0;
-                 background-position: top -28px left -28px;
-                 @extend .sec-rol-left
-             }              
-             ul{                  
-                 position: absolute;
-                 height: 257px;
-                 left: 0;
-                 top: 0;
-                    li{
-                         float: left;                    
-                         width: 198px;
-                         height: 257px;
-                         .rol-list-pic{
-                             width: 198px;
-                             height: 160px;
-                             padding: 19px;                             
-                         }
-                         .rol-list-title{
+            width: 1198px;
+            height: 257px;             
+            border: 1px solid #ECECEC;
+            position: absolute;
+            overflow: hidden;
+            .rol-list-box{
+                width: 10000px;
+                height: 257px;
+                position: absolute;
+                .rol-list{
+                    float: left;
+                    width: 1198px;
+                    height: 257px;
+                    ul{
+                        width: 1198px;
+                        height: 257px;
+                        padding: 0 5px;
+                        li{
+                            float: left;
+                            width: 198px;
+                            height: 257px;
+                            .rol-list-title{
                              width: 190px;
                              height: 18px;
                              padding: 0 4px;
@@ -845,15 +836,765 @@ section{
                              white-space: nowrap;
                              overflow: hidden;
                              text-overflow: ellipsis;
-                         }
-                         .roll-price{
-                             @extend .rol-list-title
-                         }
-                     
-                 }
-             }
+                            }
+                                .rol-list-pic{
+                                 width: 198px;
+                                 height: 160px;
+                                 padding: 19px;                             
+                             }
+                             .roll-price{
+                                 color: #CC0000;
+                                 padding: 0 4px;
+                             }      
+                        }
+                    }
+                }
+            }
+        } 
+    }
+//--------楼梯开始----------------1楼 -----------------//
+.section-floor1{
+    width: 1200px;
+    height: 700px;
+    margin-top:16px;
+    clear: both;
+    .sec-flo-title{
+        width: 1194px;
+        height: 35px;
+        padding: 0 3px;
+        overflow: hidden;
+        .sec-flo-left{
+            float: left;             
+            line-height: 30px;
+            font-size: 16px;
+            span{
+                float: left;
+                width: 28px;
+                height: 29px;
+                margin-right: 10px;
+                text-align: center;
+                line-height: 28px;
+                color: #fff;                 
+                background: url(../image/newIndexIcon-24.png);
+                background-position: top -95px left 0;
+            }
+        }
+      .sec-flo-right{
+          float: right;          
+          a{
+              line-height: 30px;
+              display: inline; 
+              padding:0 8px; 
+              border-left: 3px solid #b199b1; 
+              border-image: url(../image/flo-right-bor.jpg) no-repeat left;            
+               
+          }
+          
+      }
+      .flor-name{
+          float: right;
+          width: 60px;
+          height: 23px;
+          font-weight: 900;
+          margin-top: 3px;
+          background: #CC0000;
+          text-align: center;
+          line-height: 23px;
+          border-radius: 3px;
+          a{
+              color: #fff;
+              text-decoration: none;
+          }
+      } 
+    }
+    .sec-flo-main{
+        width: 1198px;
+        height: 647px;
+        border: 1px solid #ececec;
+        border-top: 2px solid #CC0000;
+        border-right: 0;
+        .flo-main-left{
+            width: 210px;
+            height: 647px;
+            float: left;
+            border-right: 1px solid #ececec;
+            .flo-left-top{
+                width: 210px;
+                height: 485px;
+                overflow: hidden;
+                position: relative;
+                ul{ 
+                    width: 840px;                                       
+                    position: absolute;
+                    li{
+                        float: left;
+                        width: 210px;
+                        height: 485px;
+                        a{
+                            display: block;
+                            height: 210px;
+                            height: 485px;
+                        }                        
+                    }
+                }
+                .flo-left-top-nav{
+                    width: 210px;
+                    position: absolute;
+                    height: 15px;
+                    bottom: 10px;
+                    text-align: center;
+                    .active{
+                        background: #fc5422;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        background: #fff;
+                        border-radius: 50%;
+                        margin: 0 8px;
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+            .flo-left-bottom{
+                width: 186px;
+                height: 217px;
+                border-top: 1px solid #ececec;
+                padding: 17px 12px;                 
+                .flo-left-bottom-list{
+                    width: 186px;
+                    height: 60px;
+                    overflow: hidden; 
+                    h4{
+                        width: 186px;
+                        height: 19px;
+                        line-height:19px ;
+                        color: #CC0000;
+                        overflow: hidden;
+                        span{
+                            float: left;
+                            width: 3px;
+                            height: 3px;
+                            background: #CC0000;
+                            margin-right: 5px;
+                            margin-top: 8px;
+                        }
+                    }                
+                    p{
+                        width: 178px;
+                        height: 36px;
+                        margin: 5px 0 0 8px;
+                        line-height: 18px;
+                        a{
+                            display: inline-block;
+                            padding-right: 10px;                             
+                        }
+                    }
+                }
+            }
+        }
+        .flo-main-right{
+            width: 987px;
+            float: right;
+            .flo-right-top{
+                width: 987px;
+                height: 485px;
+                background: #fff;
+                ul{
+                    width: 985px;
+                    height: 483px;
+                    padding: 1px;
+                    border-bottom: 1px solid #ececec;
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        width: 196px;
+                        height: 232px;
+                        padding-top: 10px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #ececec;
+                        border-right: 1px solid #ececec;
+                        .top-list-pic{
+                            width: 160px;
+                            height: 160px;
+                            margin: 0 auto;
+                            a{
+                                display: block;
+                                height: 160px;
+                                width: 160px;
+                            }                           
+                        }
+                        .top-list-title{
+                            width: 160px;
+                            height: 36px;
+                            padding: 0 18px;
+                            margin-top: 5px;
+                        }
+                        .top-list-price{
+                            width: 178px;
+                            height: 18px;
+                            padding-left: 18px;
+                            line-height: 18px;
+                            color: #CC0000;
+                        }
+                    }
+                }
+            }
+            .flo-right-bottom{
+                width: 987px;
+                height: 161px;
+                border-right: 1px solid #ececec;
+                background: #fff;
+                border-top: 1px solid #ececec;
+                .flo-bottom-title{
+                    width: 987px;
+                    height: 32px;
+                    h4{
+                        float: left;
+                        margin-left: 14px;
+                        color: #CC0000;
+                        line-height: 32px;
+                        overflow: hidden;
+                        span{
+                            float: left;
+                            width: 11px;
+                            height: 13px;
+                            margin-top: 10px;
+                            margin-right: 5px;
+                            background: url(../image/newIndexIcon-24.png) no-repeat;
+                            background-position: top 0 left -38px;
+                        }
+                        
+                    }
+                    ul{
+                        float: right;
+                        line-height: 32px;
+                        margin-right: 12px;
+                        .hover{
+                            color: #CC0000;
+                        }
+                        li{
+                            display: inline;
+                            padding: 0 10px 0 11px;
+                            cursor: pointer;
+                            border-right: 1px solid #ddd;
+                        }
+                    }
+                }
+                .flo-bottom-show{
+                    width: 985px;
+                    margin-left: 2px;
+                    height: 100px;
+                    padding: 10px 0 17px 0;
+                    
+                    dl{
+                        width: 190px;
+                        padding-right: 7px;
+                        height: 100px;
+                        float: left;
+                        overflow: hidden;
+                        dt{
+                            float: left;
+                            width: 96px;
+                            height: 96px;
+                            margin: 2px 7px;
+                            a{
+                                display: block;
+                                height: 96px;
+                                width: 96px;                                
+                            }
+                        } 
+                        dd{
+                           float: left;
+                           margin-top: 5px;
+                           width: 80px;
+                           height: 64px;
+                           overflow: hidden;
+                           p{  
+                               width: 80px;
+                               height: 36px;
+                               line-height: 18px;
+                               overflow: hidden;                               
+                           }
+                           b{
+                               display: block;
+                               height: 18px;
+                               margin-top: 5px;
+                               font-size: 16px;
+                           }
+                        }                        
+                    }
+                }
+            }
         }
     }
+}
+//----------------------二楼开始------------------------//
+.section-floor2{
+    width: 1200px;
+    height: 700px;
+    margin-top:16px;
+    clear: both;
+    .sec-flo2-title{
+        width: 1194px;
+        height: 35px;
+        padding: 0 3px;
+        overflow: hidden;
+        .sec-flo2-left{
+            float: left;             
+            line-height: 30px;
+            font-size: 16px;
+            span{
+                float: left;
+                width: 28px;
+                height: 29px;
+                margin-right: 10px;
+                text-align: center;
+                line-height: 28px;
+                color: #fff;                 
+                background: url(../image/newIndexIcon-24.png);
+                background-position: top -95px left -30px;
+            }
+        }
+      .sec-flo2-right{
+          float: right;          
+          a{
+              line-height: 30px;
+              display: inline; 
+              padding:0 8px; 
+              border-left: 3px solid #b199b1; 
+              border-image: url(../image/flo-right-bor.jpg) no-repeat left;            
+               
+          }
+          
+      }
+      .flor2-name{
+          float: right;
+          width: 60px;
+          height: 23px;
+          font-weight: 900;
+          margin-top: 3px;
+          background: #CC0000;
+          text-align: center;
+          line-height: 23px;
+          border-radius: 3px;
+          a{
+              color: #fff;
+              text-decoration: none;
+          }
+      } 
+    }
+    .sec-flo2-main{
+        width: 1198px;
+        height: 647px;
+        border: 1px solid #ececec;
+        border-top: 2px solid #CC0000;
+        border-right: 0;
+        .flo2-main-left{
+            width: 210px;
+            height: 647px;
+            float: left;
+            border-right: 1px solid #ececec;
+            .flo2-left-top{
+                width: 210px;
+                height: 485px;
+                overflow: hidden;
+                position: relative;
+                ul{ 
+                    width: 840px;                                       
+                    position: absolute;
+                    li{
+                        float: left;
+                        width: 210px;
+                        height: 485px;
+                        a{
+                            display: block;
+                            height: 210px;
+                            height: 485px;
+                        }                        
+                    }
+                }
+                .flo2-left-top-nav{
+                    width: 210px;
+                    position: absolute;
+                    height: 15px;
+                    bottom: 10px;
+                    text-align: center;
+                    .active{
+                        background: #fc5422;
+                    }
+                    span{
+                        display: inline-block;
+                        width: 15px;
+                        height: 15px;
+                        background: #fff;
+                        border-radius: 50%;
+                        margin: 0 8px;
+                        cursor: pointer;
+                    }
+                    
+                }
+            }
+            .flo2-left-bottom{
+                width: 186px;
+                height: 217px;
+                border-top: 1px solid #ececec;
+                padding: 17px 12px;                 
+                .flo2-left-bottom-list{
+                    width: 186px;
+                    height: 60px;
+                    overflow: hidden; 
+                    h4{
+                        width: 186px;
+                        height: 19px;
+                        line-height:19px ;
+                        color: #CC0000;
+                        overflow: hidden;
+                        span{
+                            float: left;
+                            width: 3px;
+                            height: 3px;
+                            background: #CC0000;
+                            margin-right: 5px;
+                            margin-top: 8px;
+                        }
+                    }                
+                    p{
+                        width: 178px;
+                        height: 36px;
+                        margin: 5px 0 0 8px;
+                        line-height: 18px;
+                        a{
+                            display: inline-block;
+                            padding-right: 5px;                             
+                        }
+                    }
+                }
+            }
+        }
+        .flo2-main-right{
+            width: 987px;
+            float: right;
+            .flo2-right-top{
+                width: 987px;
+                height: 485px;
+                background: #fff;
+                ul{
+                    width: 985px;
+                    height: 483px;
+                    padding: 1px;
+                    border-bottom: 1px solid #ececec;
+                    overflow: hidden;
+                    li{
+                        float: left;
+                        width: 196px;
+                        height: 232px;
+                        padding-top: 10px;
+                        overflow: hidden;
+                        border-bottom: 1px solid #ececec;
+                        border-right: 1px solid #ececec;
+                        .top-list-pic{
+                            width: 160px;
+                            height: 160px;
+                            margin: 0 auto;
+                            a{
+                                display: block;
+                                height: 160px;
+                                width: 160px;
+                            }                           
+                        }
+                        .top-list-title{
+                            width: 160px;
+                            height: 36px;
+                            padding: 0 18px;
+                            margin-top: 5px;
+                        }
+                        .top-list-price{
+                            width: 178px;
+                            height: 18px;
+                            padding-left: 18px;
+                            line-height: 18px;
+                            color: #CC0000;
+                        }
+                    }
+                }
+            }
+            .flo2-right-bottom{
+                width: 987px;
+                height: 161px;
+                border-right: 1px solid #ececec;
+                background: #fff;
+                border-top: 1px solid #ececec;
+                .flo2-bottom-title{
+                    width: 987px;
+                    height: 32px;
+                    h4{
+                        float: left;
+                        margin-left: 14px;
+                        color: #bd7833;
+                        line-height: 32px;
+                        overflow: hidden;
+                        span{
+                            float: left;
+                            width: 11px;
+                            height: 13px;
+                            margin-top: 10px;
+                            margin-right: 5px;
+                            background: url(../image/newIndexIcon-24.png) no-repeat;
+                            background-position: top 0 left -24px;
+                        }
+                        
+                    }
+                    ul{
+                        float: right;
+                        line-height: 32px;
+                        margin-right: 12px;
+                        .hover{
+                            color: #CC0000;
+                        }
+                        li{
+                            display: inline;
+                            padding: 0 10px 0 11px;
+                            cursor: pointer;
+                            border-right: 1px solid #ddd;
+                        }
+                    }
+                }
+                .flo2-bottom-show{
+                    width: 985px;
+                    margin-left: 2px;
+                    height: 100px;
+                    padding: 10px 0 17px 0;
+                    
+                    dl{
+                        width: 190px;
+                        padding-right: 7px;
+                        height: 100px;
+                        float: left;
+                        overflow: hidden;
+                        dt{
+                            float: left;
+                            width: 96px;
+                            height: 96px;
+                            margin: 2px 7px;
+                            a{
+                                display: block;
+                                height: 96px;
+                                width: 96px;                                
+                            }
+                        } 
+                        dd{
+                           float: left;
+                           margin-top: 5px;
+                           width: 80px;
+                           height: 64px;
+                           overflow: hidden;
+                           p{  
+                               width: 80px;
+                               height: 36px;
+                               line-height: 18px;
+                               overflow: hidden;                               
+                           }
+                           b{
+                               display: block;
+                               height: 18px;
+                               margin-top: 5px;
+                               font-size: 16px;
+                           }
+                        }                        
+                    }
+                }
+            }
+        }
+    }
+  }
+//---------------------------三楼开始-------//
+.section-floor3{
+    width: 1200px;
+    height: 522px;
+    margin-top: 16px;
+    .sec-flo3-title{
+        width: 1194px;
+        height: 35px;
+        padding: 0 3px;
+        overflow: hidden;
+        .sec-flo3-left{
+            float: left;
+            line-height: 30px;
+            font-size: 16px;
+            color: #fff;
+            span{
+                float: left;
+                width: 28px;
+                height: 29px;
+                margin-right: 10px;
+                text-align: center;
+                line-height: 28px;
+                background: url(../image/newIndexIcon-24.png) no-repeat;
+                background-position: top -95px left -61px;
+            }
+        }
+            .flor3-name{
+                  float: right;
+                  width: 60px;
+                  height: 23px;
+                  font-weight: 900;
+                  margin-top: 3px;
+                  background: #276594;
+                  text-align: center;
+                  line-height: 23px;
+                  border-radius: 3px;
+                  a{
+                      color: #fff;
+                      text-decoration: none;
+                  }                
+            }
+            .sec-flo3-right{
+                    float: right;          
+                    a{
+                      line-height: 30px;
+                      display: inline; 
+                      padding:0 8px; 
+                      border-left: 3px solid #b199b1; 
+                      border-image: url(../image/flo-right-bor.jpg) no-repeat left;                                   
+                    }
+            }        
+    }
+   .sec-flo3-main{
+       width: 1198px;
+       height: 485px;
+       border: 1px solid #ececec;
+       border-top: 2px solid #276594;
+       .flo3-main-left{
+           width: 210px;
+           height: 485px;
+           float: left;
+           background: #fff;
+           .flo3-left-top{
+               width: 210px;
+               height: 320px;
+               overflow: hidden;
+               position: relative;
+               .flo3-left-top-list{
+                  height: 320px;
+                  width: 630px;
+                  position: absolute;
+                  li{
+                      width: 210px;
+                      height: 320px;
+                      float: left;
+                      a{
+                          display: block;
+                          width: 210px;
+                          height: 320px;
+                      }
+                  }
+               }
+               .flo3-left-top-nav{
+                   width: 210px;
+                   height: 15px;
+                   position: absolute;
+                   bottom: 10px;
+                   text-align: center;                    
+                   .active{
+                       background: #296693;
+                   }
+                   span{
+                       display: inline-block;
+                       width: 15px;
+                       height: 15px;
+                       border-radius: 50%;
+                       background: #fff;
+                       cursor: pointer;
+                   }
+               }
+           }
+             .flo3-left-bottom{
+                width: 186px;
+                height: 132px;
+                border-top: 1px solid #ececec;
+                padding: 17px 12px;                 
+                .flo3-left-bottom-list{
+                    width: 186px;
+                    height: 60px;
+                    overflow: hidden; 
+                    h4{
+                        width: 186px;
+                        height: 19px;
+                        line-height:19px ;
+                        color: #CC0000;
+                        overflow: hidden;
+                        span{
+                            float: left;
+                            width: 3px;
+                            height: 3px;
+                            background: #CC0000;
+                            margin-right: 5px;
+                            margin-top: 8px;
+                        }
+                    }                
+                    p{
+                        width: 178px;
+                        height: 36px;
+                        margin: 5px 0 0 8px;
+                        line-height: 18px;
+                        a{
+                            display: inline-block;
+                            padding-right: 5px;                             
+                        }
+                    }
+                }
+            }  
+    
+       }
+       .flo3-main-right{
+           width: 988px;
+           height: 485px;
+           float: right;
+           background: #fff;
+           ul{
+              width: 985px;
+              height: 484px;               
+              border-bottom: 1px solid #ececec;
+              overflow: hidden;
+              li{
+                  float: left;
+                  width: 196px;
+                  height: 232px;
+                  padding-top: 10px;
+                  overflow: hidden;
+                  border-bottom: 1px solid #ececec;
+                  border-left: 1px solid #ececec;
+                  .top-list-pic{
+                                  width: 160px;
+                                  height: 160px;
+                                  margin: 0 auto;
+                                 a{
+                                    display: block;
+                                    height: 160px;
+                                     width: 160px;
+                                  }                           
+                                }
+                        .top-list-title{
+                            width: 160px;
+                            height: 36px;
+                            padding: 0 18px;
+                            margin-top: 5px;
+                        }
+                        .top-list-price{
+                            width: 178px;
+                            height: 18px;
+                            padding-left: 18px;
+                            line-height: 18px;
+                            color: #CC0000;
+                        }
+                    }
+                }
+       }
+   }
+}
 }
 footer{
     width: 100%;
